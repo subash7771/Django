@@ -1,0 +1,12 @@
+{% extends "finds/layout.html" %}
+
+{% block body %}
+<h1> Find the Solution</h1>
+    {% for find in finds %}
+    <li> {{ find }}</li>
+    {% empty %}
+      <li>Sorry !! We don't have Report</li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'finds:add' %}"> Add a new find </a>
+{% endblock %}
