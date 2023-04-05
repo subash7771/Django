@@ -1,0 +1,12 @@
+{% extends "samasya/layout.html" %}
+
+{% block body %}
+<h1> Find the Samasya</h1>
+    {% for samasya in samasya %}
+    <li> Samasya {{ samasya.id }}: {{ samasya.district}} to {{ samasya.address}} </li>
+    {% empty %}
+      <li>Sorry !! We don't have Report</li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'finds:add' %}"> Add a new find </a>
+{% endblock %}
